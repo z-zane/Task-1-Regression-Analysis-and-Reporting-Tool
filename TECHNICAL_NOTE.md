@@ -21,17 +21,20 @@ The entire workflow is guided through a 5-page interface requiring no programmin
 ## Data Requirements
 
 **Input Format:**
+
 - CSV (comma-separated values) or Excel (.xlsx, .xls) files
 - Data should be in tabular format with variables as columns and observations as rows
 - First row should contain variable names
 
 **Variable Requirements:**
+
 - **Dependent variable:** Should be numeric (continuous for OLS, binary 0/1 for Logit)
 - **Independent variables:** Should be numeric; categorical variables with >2 categories should be pre-encoded as numeric
 - **Sample size:** Minimum ~30 observations; recommended 15-20+ observations per predictor
 - **Missing data:** Any missing values (NA, empty cells) will be handled via complete-case analysis
 
 **Quality Considerations:**
+
 - Remove ID columns, names, and other non-analytical variables
 - Ensure proper encoding of categorical variables (0/1 for binary, 1/2/3 for ordered categories)
 - Check for data entry errors and extreme outliers
@@ -39,6 +42,7 @@ The entire workflow is guided through a 5-page interface requiring no programmin
 ## Outputs Produced
 
 **1. Regression Results Table**
+
 - Variable names
 - Coefficients (estimated effects)
 - Standard errors (uncertainty measures)
@@ -48,16 +52,19 @@ The entire workflow is guided through a 5-page interface requiring no programmin
 - Significance indicators (*, **, ***, +)
 
 **2. Model Statistics**
+
 - **OLS specific:** R² (variance explained), Adjusted R², F-statistic with p-value, AIC, BIC, RMSE
 - **Logit specific:** Pseudo R² (McFadden's), Log-Likelihood, AIC, BIC
 - Sample size (observations analyzed and dropped)
 
 **3. Visualizations**
+
 - **Coefficient plot:** Displays coefficients with 95% confidence intervals; helps identify significant effects
 - **Diagnostic plots (OLS only):** Residuals plot and distribution; assess model assumptions
 - **Predicted vs. Actual:** Comparison of model predictions to observed values
 
 **4. Export Formats**
+
 - CSV tables (universal compatibility)
 - Excel workbooks (formatted for presentation)
 - PNG images at 300 DPI (publication-ready)
@@ -65,20 +72,24 @@ The entire workflow is guided through a 5-page interface requiring no programmin
 ## Result Interpretation
 
 **Coefficients:**
+
 - **OLS:** One-unit increase in predictor X is associated with [coefficient] unit change in outcome Y
 - **Logit:** One-unit increase in X is associated with [coefficient] change in log-odds of outcome; multiply by e for odds ratio
 
 **Significance:**
+
 - P-value < 0.05 indicates statistical significance at the 5% level
 - Confidence intervals not crossing zero indicate significant effects
 - Significance stars (*, **, ***) follow standard conventions
 
 **Model Fit:**
+
 - **R² (OLS):** Higher is better; 0.3 = 30% variance explained
 - **Pseudo R² (Logit):** Generally lower values than OLS; use for model comparison not absolute fit
 - **AIC/BIC:** Lower values indicate better model fit; useful for comparing competing models
 
 **Effect Size:**
+
 - Small effect: Coefficient/OR ≈ 0.1-0.2 units or 10-20% change
 - Medium effect: Coefficient/OR ≈ 0.5 units or 50% change
 - Large effect: Coefficient/OR ≈ 1.0+ units or >100% change
@@ -86,6 +97,7 @@ The entire workflow is guided through a 5-page interface requiring no programmin
 ## Model Assumptions
 
 **OLS (Ordinary Least Squares) Regression:**
+
 1. **Linearity:** Relationship between X and Y is linear
 2. **Independence:** Observations are independent (no clustering, time-series correlation)
 3. **Homoscedasticity:** Constant error variance across all X values
@@ -94,6 +106,7 @@ The entire workflow is guided through a 5-page interface requiring no programmin
 6. **Correct specification:** No serious omitted variable bias
 
 **Logistic Regression:**
+
 1. **Binary outcome:** Dependent variable must have exactly 2 unique values
 2. **Independence:** Observations are independent
 3. **Log-odds linearity:** Linear relationship between X and log-odds of Y
@@ -138,16 +151,3 @@ With additional development time, the following enhancements would be valuable:
 ## Conclusion
 
 The Regression Analysis and Reporting Tool makes regression analysis accessible to non-programmers while maintaining statistical rigor. By automating data validation, model fitting, and result formatting, it reduces barriers to entry for applied research. The tool is best suited for exploratory analysis, quick model comparison, and producing presentation-ready results in academic and applied settings. Researchers should remain aware of the model assumptions and limitations, particularly regarding causality inference and missing data handling.
-
----
-
-**Technical Specifications:**
-- **Language:** Python 3.8+
-- **Framework:** Streamlit 1.28.1
-- **Statistics:** statsmodels 0.14.0
-- **Data:** pandas 2.0.3, numpy 1.24.3
-- **Visualization:** matplotlib 3.7.2, seaborn 0.12.2
-- **License:** MIT (open-source)
-- **Repository:** [To be filled with GitHub link]
-
-**Word Count:** 1,047 words
