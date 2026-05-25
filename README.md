@@ -201,13 +201,5 @@ regression_tool/
 ├── requirements.txt         # Python dependencies
 ├── demo_data.csv           # Sample dataset
 ├── README.md               # This file
-└── LIMITATIONS.md          # Detailed assumptions and limitations
+└── Notes.md          # Detailed assumptions and limitations
 ```
-
-## Support
-
-For issues, questions, or feature requests, please check:
-
-1. README.md (this file)
-2. LIMITATIONS.md (assumptions and limitations)
-3. Inline code documentation in the .py files
