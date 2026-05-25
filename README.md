@@ -26,21 +26,10 @@ A user-friendly Streamlit application for conducting regression analysis and gen
 
    ```bash
    cd regression_tool
+   git clone https://github.com/z-zane/Task-1-Regression-Analysis-and-Reporting-Tool.git
    ```
 
-2. **Create a virtual environment (recommended)**
-
-   ```bash
-   python -m venv venv
-   
-   # On Windows:
-   venv\Scripts\activate
-   
-   # On macOS/Linux:
-   source venv/bin/activate
-   ```
-
-3. **Install dependencies**
+2. **Install dependencies**
 
    ```bash
    pip install -r requirements.txt
