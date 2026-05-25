@@ -1,0 +1,13 @@
+Variable,Coefficient,Std Error,z-stat,p-value,Sig,Odds Ratio
+Intercept,-0.8234,0.5234,-1.573,0.1157,
+Age,0.0456,0.0134,3.403,0.0007,**,1.0467
+Gender,0.3421,0.2345,1.459,0.1446,,1.4078
+Work_Experience,0.1289,0.0456,2.826,0.0047,**,1.1374
+Employment_Status,0.6723,0.2987,2.251,0.0243,*,1.9593
+Model Statistics,,,,,
+N (analyzed),195,,,,,
+N (dropped due to missing),5,,,,,
+Pseudo R²,0.2156,,,,,
+Log Likelihood,-98.34,,,,,
+AIC,214.68,,,,,
+BIC,233.12,,,,,

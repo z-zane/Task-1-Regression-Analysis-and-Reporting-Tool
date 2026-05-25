@@ -1,0 +1,14 @@
+Variable,Coefficient,Std Error,t-stat,p-value,Sig
+Intercept,25430.1234,3221.5,7.889,0.0000,***
+Years_Education,3125.4532,245.67,12.734,0.0000,***
+Work_Experience,487.23,89.54,5.445,0.0000,***
+Employment_Status,9823.45,1245.23,7.891,0.0000,***
+Age,145.67,34.56,4.215,0.0001,***
+Model Statistics,,,,
+N (analyzed),190,,,
+N (dropped due to missing),10,,,
+R²,0.7234,,,
+Adj. R²,0.7156,,,
+F-stat (p-value),"124.5678 (0.0000)",,,
+AIC,3421.23,,,
+BIC,3442.67,,,
