@@ -25,7 +25,6 @@ A user-friendly Streamlit application for conducting regression analysis and gen
 1. **Clone or download this repository**
 
    ```bash
-   cd regression_tool
    git clone https://github.com/z-zane/Task-1-Regression-Analysis-and-Reporting-Tool.git
    ```
 
